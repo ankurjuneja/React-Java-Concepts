@@ -8,12 +8,15 @@ class SelSort{
     private int idx;
     
     public void selSort(int arr[],int len){
+        //traversing through unsorted array
        for (int i =0;i<=len-1;i++){
            temp = i;
+           //find the minimum element in unsorted array
            for (int j=i+1;j<len;j++){
                if (arr[j] < arr[temp])
                 temp = j;
            }
+           //swapping the first element with minimum element
            idx = arr[temp];
            arr[temp] = arr[i];
            arr[i] = idx;
@@ -21,7 +24,7 @@ class SelSort{
        }
     }
     
-  
+  // method to print sorted array
     public void printArray(int arr[], int len){
         for(int i=0;i<len;i++){
             System.out.print(  arr[i] +" ");
