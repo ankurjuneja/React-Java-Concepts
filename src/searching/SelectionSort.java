@@ -1,6 +1,6 @@
 // Selection sort finds the minimum element from the unsorted array and it in sorted array
 // this process is repeated until all the elements are in sorted array
-package practice;
+package searching;
 
 class SelSort{
     
