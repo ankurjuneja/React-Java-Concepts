@@ -45,3 +45,23 @@ P.S where ever possible, use thread safe objects to manage your class's state.
 
 #### **2. Locking**
 Related state variables need to be updated in single atomic operation to preserve consistency.
+
+*synchronized block* - locking mechanism provided by Java for enforcing Atomicity. It has two parts
+* reference to an object that will serve as the lock
+* block of code to be guarded by that lock
+
+```
+synchronized(lock)
+{
+  //code having shared state guarded by lock
+  //this code act as single, indivisible unit
+}
+```
+
+synchronized keyword can be used with method that spans entire method body.
+
+*Intrinsic lock or monitor lock* - object(executing thread) acquiring lock before entering a synchronized block. They are mutually exclusive locks.
+
+P.S. Intrinsic locks are *reentrant* meaning thread can acquire a lock that it already holds.
+
+Achiving concurrency by using synchronized blocks or synchronized keyword can cause performance problems.
