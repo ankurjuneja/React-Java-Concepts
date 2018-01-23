@@ -65,3 +65,8 @@ synchronized keyword can be used with method that spans entire method body.
 P.S. Intrinsic locks are *reentrant* meaning thread can acquire a lock that it already holds.
 
 Achiving concurrency by using synchronized blocks or synchronized keyword can cause performance problems.
+
+#### **3. Volatile variables**
+When a field is declared volatile, the compiler and runtime are put on notice that this variable is shared.
+
+use only when you need to simplify synchronization implementation, avoid when verifying correctness would require subtle reasoning. most common use - completion, interruption or status flag.
