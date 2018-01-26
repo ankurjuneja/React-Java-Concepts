@@ -31,3 +31,32 @@
          return reverseRecursively(strToReverse.substring(1))+strToReverse.charAt(0);
      }
   ```
+**Given two Strings, check if one is permutation of the other**
+
+ Assumption-Comparision is case sensitive and white spaces are significant
+
+ ```
+ public Boolean checkPermutation (String str1, String str2)
+     {
+         if(str1.length()!=str2.length())
+             return false;
+
+         int[] letters = new int[256]; // Assumption ASCII character set
+         char[] str1Array = str1.toCharArray();
+
+         for(char c: str1Array)
+         {
+             letters[c]++;
+         }
+
+         for (int i=-0; i<str2.length();i++)
+         {
+             int c = (int) str2.charAt(i);
+             if(--letters[c] < 0)
+                 return false;
+         }
+
+         return true;
+     }
+ ```
+
