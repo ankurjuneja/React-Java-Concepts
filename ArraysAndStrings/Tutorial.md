@@ -60,3 +60,28 @@
      }
  ```
 
+ **find whether the String has all unique characters**
+
+    ```
+    public boolean isUnique(String str){
+ 		//ascii character set is 128 unique chars
+ 		if (str.length() > 128)
+ 			return false;
+
+ 		boolean[] charSet = new boolean[128];
+
+ 		for (int i=0; i<str.length(); i++){
+ 			int val = str.charAt(i);
+
+ 			//found this char in string
+ 			if (charSet[i])
+ 				return false;
+
+ 			//value in char set is marked as true
+
+ 			charSet[val] = true;
+ 		}
+
+ 		return true;
+ 	}
+ ```
