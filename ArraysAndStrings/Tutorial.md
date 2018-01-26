@@ -62,7 +62,7 @@
 
  **find whether the String has all unique characters**
 
-    ```
+    
     public boolean isUnique(String str){
  		//ascii character set is 128 unique chars
  		if (str.length() > 128)
@@ -84,4 +84,4 @@
 
  		return true;
  	}
- ```
+ 
