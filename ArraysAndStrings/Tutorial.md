@@ -1,9 +1,11 @@
 ## Arrays and Strings
 
-** Reverse a String **
+**Reverse a String**
 
  *String* is a sequence of characters. Can be represented by char arrays. Immutable objects.
+ 
  *StringBuilder* is mutable sequence of characters. Instances of StringBuilder are not safe for use by multiple threads.
+ 
  Use *StringBuffer* for synchronization.
 
  substring is a method that returns the substring from the specified index i.e. the begin index.
