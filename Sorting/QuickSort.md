@@ -1,4 +1,4 @@
-##QuickSort
+## QuickSort
 
 -It is a divide and conquer algorithm for sorting.It is in-place sorting having O(N Log N) on the average.
 
