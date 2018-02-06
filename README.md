@@ -70,3 +70,6 @@ Achiving concurrency by using synchronized blocks or synchronized keyword can ca
 When a field is declared volatile, the compiler and runtime are put on notice that this variable is shared.
 
 use only when you need to simplify synchronization implementation, avoid when verifying correctness would require subtle reasoning. most common use - completion, interruption or status flag.
+
+#### **4. Sharing Objects**
+*Publishing* an object refers to making it available to code outside of its current scope. Publish can compromise thread safety and can compromise encapsulation (if internal state variables are published). Published object is said to have *escaped*.
