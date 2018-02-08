@@ -85,3 +85,23 @@
  		return true;
  	}
  
+**Given a string and two integers, find all the unique substrings of all lenghts between those integers
+
+```
+public void mySubString(String s,int left,int right)
+    {
+        List<String > subStrings = new ArrayList<>();
+
+        for(int i=left;i<=right+1;i++)
+        {
+            for(int j=i;j<=right+1;j++)
+            {
+                if(s.substring(i,j).length()!=0 && !subStrings.contains(s.substring(i,j))) {
+                subStrings.add(s.substring(i,j));
+                }
+            }
+        }
+
+        System.out.println(subStrings.size());
+    }
+```
