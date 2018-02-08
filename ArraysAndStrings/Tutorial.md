@@ -85,7 +85,7 @@
  		return true;
  	}
  
-**Given a string and two integers, find all the unique substrings of all lenghts between those integers
+**Given a string and two integers, find all the unique substrings of all lenghts between those integers**
 
 ```
 public void mySubString(String s,int left,int right)
