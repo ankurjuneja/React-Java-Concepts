@@ -1,5 +1,5 @@
 # About
-This repository contains programns implementing various searching, sorting, data structures and other algorithms in Java.
+This repository contains ReactJS and important Java concepts.
 
 - [ReactJS](https://github.com/ankurjuneja/React-Java-Concepts/blob/master/ReactJs/Introduction.md)
 - Java
