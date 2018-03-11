@@ -1,8 +1,8 @@
 # About
 This repository contains programns implementing various searching, sorting, data structures and other algorithms in Java.
 
-* [Arrays and Strings](https://github.com/ankurjuneja/React-Java-Concepts/ArraysAndStrings/Tutorial.md)
-* [Learn ReactJS](https://github.com/ankurjuneja/React-Java-Concepts/ReactJs/Introduction.md)
+* [Arrays and Strings](https://github.com/ankurjuneja/React-Java-Concepts/blob/master/ArraysAndStrings/Tutorial.md)
+* [Learn ReactJS](https://github.com/ankurjuneja/React-Java-Concepts/blob/master/ReactJs/Introduction.md)
 
 ### Multithreading | Concurrency | Thread Safety
 When a variable or piece of code is shared by multiple threads, there is a need for thread safe code for its correct execution i.e. the concept of correctness. Threads are lightweight process that allow multiple streams of program flow to co-exist with in a process.
