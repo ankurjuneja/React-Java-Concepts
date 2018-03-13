@@ -44,8 +44,8 @@ public class Deck {
 
     //print deck
     public void printDeck() {
-        for (int i =0; i< numOfCards; i++)
-            System.out.println(DECK[i]);
+        Arrays.stream(DECK)
+                .forEach(card -> System.out.println(card));
     }
 
     public static void main(String[] args) {
