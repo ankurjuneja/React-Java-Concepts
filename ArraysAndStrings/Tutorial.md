@@ -129,3 +129,19 @@ public void shuffleArray(int arr[]) {
 **Shuffle a Deck of cards**
 
 [Java Program](https://github.com/ankurjuneja/React-Java-Concepts/blob/master/src/ArraysAndStrings/Deck.java)
+
+**Method to replace all spaces in a string with %20**
+```
+public static String replaceSpaceWithPercent20(String str) {
+        char[] charArray = str.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        String percent20 = "%20";
+        for(int i = 0; i < charArray.length-1; i++) {
+            if(charArray[i] == ' ' && charArray[i+1] != ' ')
+                sb.append(percent20);
+            else
+                sb.append(charArray[i]);
+        }
+        return sb.toString();
+    }
+```
