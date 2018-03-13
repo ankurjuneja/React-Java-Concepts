@@ -106,5 +106,26 @@ public void mySubString(String s,int left,int right)
     }
 ```
 
+**Shuffle array of integer**
+```
+public void shuffleArray(int arr[]) {
+        Random rand = new Random();
+
+        //start from the last element and swap one-by-one
+        for (int i = arr.length-1 ; i > 0 ; i--) {
+            //find random from 0 to i
+            int random = rand.nextInt(i);
+            
+            //swap arr[i] with element at random index
+            int temp = arr[random];
+            arr[random] = arr[i];
+            arr[i] = temp;
+        }
+
+        System.out.println(Arrays.toString(arr));
+    }
+```
+
 **Shuffle a Deck of cards**
+
 [Java Program](https://github.com/ankurjuneja/React-Java-Concepts/blob/master/src/ArraysAndStrings/Deck.java)
