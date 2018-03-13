@@ -105,3 +105,6 @@ public void mySubString(String s,int left,int right)
         System.out.println(subStrings.size());
     }
 ```
+
+**Shuffle a Deck of cards**
+[Java Program](https://github.com/ankurjuneja/React-Java-Concepts/blob/master/src/ArraysAndStrings/Deck.java)
