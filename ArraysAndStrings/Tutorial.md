@@ -145,3 +145,31 @@ public static String replaceSpaceWithPercent20(String str) {
         return sb.toString();
     }
 ```
+
+**Given an array of integers, find subarray with maximum sum**
+```
+public void maxSubArraySum (int arr[]) {
+        int maxSoFar = Integer.MIN_VALUE;
+        int maxEndHere = 0;
+        int start = 0;
+        int end = 0;
+        int s = 0;
+
+        for (int i=0 ; i < arr.length; i++) {
+            maxEndHere += arr[i];
+            if(maxSoFar < maxEndHere) {
+                maxSoFar = maxEndHere ;
+                start = s;
+                end = i;
+            }
+            if (maxEndHere < 0) {
+                maxEndHere = 0;
+                s = i+1;
+            }
+        }
+        System.out.println("maximum sum of subarray-"+maxSoFar);
+        System.out.println("starting index-"+start);
+        System.out.println("ending index-"+end);
+    }
+```
+
