@@ -173,3 +173,22 @@ public void maxSubArraySum (int arr[]) {
     }
 ```
 
+**given a 2D array of integers, sorted row wise and column wise. find if number exists in the array.**
+
+Java supports multi-dimensional array by having array of arrays.
+
+```
+public boolean findNum (int[][] arr, int num) {
+        int row = 0;
+        int column = arr[row].length-1;
+        while(row >= 0 && column >=0 && row <= arr.length-1 && column <= arr.length-1) {
+            if (arr[row][column] == num)
+                return true;
+            else if ( arr[row][column] < num)
+                row++ ;
+            else
+                column--;
+        }
+        return false;
+    }
+```
