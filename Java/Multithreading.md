@@ -66,6 +66,28 @@ Achiving concurrency by using synchronized blocks or synchronized keyword can ca
 #### **3. Volatile variables**
 When a field is declared volatile, the compiler and runtime are put on notice that this variable is shared.
 
+- In java, the volatile keyword gurantees global ordering on reads and writes to a variable.
+- Volatile keyword establishes a happens-before relationship.
+- also useful for 64-bit types like long and double since they are written in two operations.
+- common example: use for a flag to terminate a thread. ex-
+
+```
+class MyVolatile extends Thread {
+  private volatile boolean flag = false;
+  
+  public void run() {
+    while(!flag) {
+      //do something
+    }
+  }
+  
+  public void end () {
+    flag = true;
+    //interrupt here
+  }
+}
+```
+
 use only when you need to simplify synchronization implementation, avoid when verifying correctness would require subtle reasoning. most common use - completion, interruption or status flag.
 
 #### **4. Sharing Objects**
