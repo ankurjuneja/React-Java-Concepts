@@ -192,3 +192,7 @@ public boolean findNum (int[][] arr, int num) {
         return false;
     }
 ```
+
+**Find the first non repeating character in a String**
+
+**Find all the palindrome pairs in an array of words**
