@@ -196,3 +196,23 @@ public boolean findNum (int[][] arr, int num) {
 **Find the first non repeating character in a String**
 
 **Find all the palindrome pairs in an array of words**
+
+**Find maximum difference in an array i.e a[j] -a[i] such that index j > index i**
+
+```
+public int maxDiff(int[] a) {
+   int maxDifference = -1;
+   int currDifference = -1;
+   int minNumber = a[0];
+   
+   for(int i = 0; i < a.length; i++) {
+      currDifference = a[i] - minNumber;
+      if (maxDifference < currDifference)
+         maxDifference = currDifference;
+      if (minNumber > a[i])
+         minNumber = a[i];
+    }
+    
+    return maxDifference;
+}
+```
