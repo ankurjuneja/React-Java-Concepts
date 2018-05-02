@@ -216,3 +216,27 @@ public int maxDiff(int[] a) {
     return maxDifference;
 }
 ```
+**Given two arrays of integers of equal length such that each integer is between 0 and 9 inclusive, find the sum of two arrays and store in new array**
+ex- A = [2,4,8] and B = [8,3,5]. Sum = [1,0,8,3].
+
+```
+public int[] sum (int[] a, int[] b) {
+    if (a.length != b.length)
+       return;
+    
+    int sum = 0;
+    int carry = 0;
+    int[] c = new int[a.length + 1];
+    
+    for (int i = a.length - 1; i >= 0; i --) {
+       sum = a[i] + b[i] + carry;
+       c[i+1] = sum % 10;
+       carry = sum / 10;
+       if (i == 0) {
+          c[i] = carry;
+       }
+    }
+    
+    return c;
+}
+```
