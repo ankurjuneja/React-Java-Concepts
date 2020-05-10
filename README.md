@@ -1,6 +1,7 @@
-# About
-This repository contains Software Engineering concepts.
+### Handy refresher guide
 
+- Bitwise operators
+  - [XOR - takes two operands, evaluates to true only when both are different](https://github.com/ankurjuneja/React-Java-Concepts/tree/master/src/XOR.java)
 - [ReactJS](https://github.com/ankurjuneja/React-Java-Concepts/blob/master/ReactJs/Introduction.md)
 - Java
   - [Arrays and Strings](https://github.com/ankurjuneja/React-Java-Concepts/blob/master/ArraysAndStrings/Tutorial.md)
