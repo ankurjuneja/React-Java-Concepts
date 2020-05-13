@@ -240,3 +240,24 @@ public int[] sum (int[] a, int[] b) {
     return c;
 }
 ```
+
+**[Two Sum](https://github.com/ankurjuneja/React-Java-Concepts/blob/master/src/ArraysAndStrings/TwoSum.java)
+```
+void printTwoSum(int[] array, int k)
+    {
+        Set<Integer> set = new HashSet<>(); // O(n) -space
+        for (int num : array) // O(n) - time
+        {
+            if (set.contains(k-num)) // O(1)
+            {
+                System.out.println("(" + (k-num) + "," + num + ")");
+                // remove duplicate
+                set.remove(k-num); // O(1)
+            }
+            else
+            {
+                set.add(num); // O(1)
+            }
+        }
+    }
+```
