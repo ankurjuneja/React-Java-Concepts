@@ -241,7 +241,7 @@ public int[] sum (int[] a, int[] b) {
 }
 ```
 
-**[Two Sum](https://github.com/ankurjuneja/React-Java-Concepts/blob/master/src/ArraysAndStrings/TwoSum.java)
+**[Two Sum](https://github.com/ankurjuneja/React-Java-Concepts/blob/master/src/ArraysAndStrings/TwoSum.java)**
 ```
 void printTwoSum(int[] array, int k)
     {
