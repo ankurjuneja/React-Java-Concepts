@@ -1,4 +1,4 @@
-### Handy refresher guide
+### Handy refresher guide - Adding this text
 
 - Bitwise operators
   - [XOR - takes two operands, evaluates to true only when both are different](https://github.com/ankurjuneja/React-Java-Concepts/tree/master/src/XOR.java)

@@ -1,4 +1,4 @@
-## Arrays and Strings
+## Arrays and Strings - Adding this text
 
  *String* is a sequence of characters. Can be represented by char arrays. Immutable objects.
  
