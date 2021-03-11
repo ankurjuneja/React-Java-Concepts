@@ -78,15 +78,65 @@ public class LinkedList {
         return head;
     }
 
-    public static void main(String[] args) {
-        ListNode node1 = new ListNode(1);
-        node1.next = new ListNode(2);
-        node1.next.next = new ListNode(4);
+    static ListNode reverseList(ListNode head) {
+        ListNode curr = head;
+        ListNode prev = null;
+        while (curr != null) {
+            ListNode nextTemp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nextTemp;
+        }
+        return prev;
+    }
 
-        ListNode node2 = new ListNode(1);
-        node2.next = new ListNode(3);
+    static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode l3 = new ListNode();
+        ListNode temp = l3;
+        int sum ;
+        int carry = 0;
+        while (l1 != null || l2 != null) {
+            sum = 0;
+
+            if (l1 == null) {
+                sum += l2.val + carry;
+                l2 = l2.next;
+            }
+            else if (l2 == null) {
+                sum += l1.val + carry;
+                l1 = l1.next;
+            }
+            else {
+                sum += l1.val + l2.val + carry;
+                l1 = l1.next;
+                l2 = l2.next;
+            }
+            carry = sum / 10;
+            sum = sum % 10;
+            temp.val = sum;
+
+            if (l1 != null || l2 != null) {
+                temp.next = new ListNode();
+                temp = temp.next;
+            }
+            else if (carry > 0 ) {
+                temp.next = new ListNode(carry);
+            }
+        }
+        return l3;
+    }
+
+    public static void main(String[] args) {
+        ListNode node1 = new ListNode(2);
+        node1.next = new ListNode(4);
+        node1.next.next = new ListNode(3);
+
+        ListNode node2 = new ListNode(5);
+        node2.next = new ListNode(6);
         node2.next.next = new ListNode(4);
 
-        ListNode mergedList = mergeTwoLists(node1, node2);
+        // ListNode mergedList = mergeTwoLists(node1, node2);
+        // reverseList(node1);
+        // addTwoNumbers(node1, node2);
     }
 }
