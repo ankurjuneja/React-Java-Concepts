@@ -219,6 +219,54 @@ public class FiftyQuestions {
         }
     }
 
+    /**
+     * longest substring without repeating characters
+     * */
+
+    public static int lengthOfLongestSubstring(String s) {
+        // a b c a b c b b
+        // 0 1 2 3 4 5 6 7
+        if (s.length() <= 1)
+            return s.length();
+        Map<Character, Integer> seenCharacters = new HashMap<>();
+        int left = 0, longest = 0;
+        for (int right = 0; right < s.length(); right++) {
+            char currentChar = s.charAt(right);
+            if (null != seenCharacters.get(currentChar) && seenCharacters.get(currentChar) >= left) {
+                left = seenCharacters.get(currentChar) + 1;
+            }
+            longest = Math.max(longest, right-left+1);
+            seenCharacters.put(currentChar, right);
+        }
+
+        return longest;
+
+    }
+
+    /**
+     * Container with largest amount of water
+     * concept - 2 shifting pointers
+     */
+    public static int maxArea(int[] height) {
+
+        if (height.length <= 1) return 0;
+
+        int left = 0;
+        int right = height.length - 1;
+        int maxArea = 0;
+
+        while (left <= right) {
+            int leftNum = height[left];
+            int rightNum = height[right];
+
+            maxArea = Math.max(maxArea, Math.min(leftNum, rightNum) * (right-left));
+            if (leftNum < rightNum) left++;
+            else right--;
+        }
+
+        return maxArea;
+    }
+
     public static void main(String[] args) {
         int index = search(new int[]{2,2,2,3,4,2}, 3, 0, 5);
         System.out.println("index of 3 is " + index);
